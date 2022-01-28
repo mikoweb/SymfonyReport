@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Raport{% endblock %}</title>
     <link rel="icon" href="{{ asset('favicon.svg') }}">
-    {#<link href="{{ asset('bundle/style.css') }}" rel="stylesheet">#}
+    <link href="{{ asset('bundle/style.css') }}" rel="stylesheet">
     {% block stylesheets %}{% endblock %}
 </head>
 <body{% block body_attrs %}{% endblock %}>
     <mwc-linear-progress progress="0" wc-ready class="app-progress active" id="appProgress"></mwc-linear-progress>
     {% block body %}{% endblock %}
-    {#<script src="{{ asset('bundle/app.min.js') }}"></script>#}
+    <script src="{{ asset('bundle/app.min.js') }}"></script>
     {% block javascripts %}{% endblock %}
 </body>
 </html>
