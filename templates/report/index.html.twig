@@ -1,5 +1,35 @@
 {% extends 'layout.html.twig' %}
 
+{% block drawer_content %}
+    {{ form(form, {'attr': {'class': 'form-behavior'}}) }}
+{% endblock %}
+
 {% block content %}
-    <p>Lorem Ipsum</p>
+    <section>
+        <h3 class="h3 panel-title">Raport</h3>
+        <app-rwd-table wc-lazy>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center">Nazwa</th>
+                        <th scope="col" class="text-center">Data</th>
+                        <th scope="col" class="text-center">Godzina</th>
+                        <th scope="col" class="text-center">Użytkownik</th>
+                        <th scope="col" class="text-center">Lokal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in items %}
+                    <tr>
+                        <th scope="row" class="text-center">{{ item.name }}</th>
+                        <td class="text-center">{{ item.createdAt|date('Y-m-d') }}</td>
+                        <td class="text-center">{{ item.createdAt|date('H:i') }}</td>
+                        <td class="text-center">{{ item.username }}</td>
+                        <td class="text-center">{{ item.localName }}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </app-rwd-table>
+    </section>
 {% endblock %}

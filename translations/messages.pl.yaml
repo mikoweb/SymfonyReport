@@ -1,0 +1,6 @@
+forms:
+    report_filter:
+        local_name: Lokal
+        submit: Zatwierdź
+        date_from: Od
+        date_to: Do
