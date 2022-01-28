@@ -1,7 +1,16 @@
 {% extends 'layout.html.twig' %}
 
 {% block drawer_content %}
-    {{ form(form, {'attr': {'class': 'form-behavior'}}) }}
+    {{ form_start(form, {'attr': {'class': 'form-behavior'}}) }}
+        <div class="report-filter">
+            {{ form_row(form.localName) }}
+            {{ form_row(form.dateFrom) }}
+            {{ form_row(form.dateTo) }}
+            <div class="form-row report-filter__button">
+                {{ form_widget(form.submit) }}
+            </div>
+        </div>
+    {{ form_end(form) }}
 {% endblock %}
 
 {% block content %}
