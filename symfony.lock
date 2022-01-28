@@ -2,6 +2,9 @@
     "behat/transliterator": {
         "version": "v1.3.0"
     },
+    "brick/math": {
+        "version": "0.9.3"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -184,6 +187,12 @@
     },
     "psr/log": {
         "version": "1.1.4"
+    },
+    "ramsey/collection": {
+        "version": "1.2.2"
+    },
+    "ramsey/uuid": {
+        "version": "4.2.3"
     },
     "sebastian/cli-parser": {
         "version": "1.0.1"
