@@ -66,9 +66,12 @@ class HistoryExport implements TimestampableInterface
      */
     private string $localName;
 
-    public function __construct()
+    public function __construct(string $name, string $username, string $localName)
     {
         $this->id = Uuid::uuid4();
+        $this->name = $name;
+        $this->username = $username;
+        $this->localName = $localName;
     }
 
     public function getId(): string|UuidInterface
